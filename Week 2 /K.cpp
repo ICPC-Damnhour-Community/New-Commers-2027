@@ -12,7 +12,7 @@ int main()
     }else if(a>=c && b>=c){
         cout<<a+b<<endl;
     }else{
-        cout<<c+b<<endl;
+        cout<<c+b<<"\n";
     }
     return 0;
 
