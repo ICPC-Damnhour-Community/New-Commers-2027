@@ -6,7 +6,7 @@ int main()
 {   
     int var,row,col;
     for (int i =1;i<=5;i++){
-        for (int j=1;j<=5;j++){
+        for (int j=1 ; j<=5 ; j++){
             cin>>var;
             if (var == 1){
                 row = i;
