@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int t; cin >> t;
+
+    while(t --){
+        int n, k; cin >> n >> k;
+        bool used = false;
+        bool ok = true;
+        int time = 0;
+    
+        for(int i = 1; i <= n; i ++){
+            int x; cin >> x;
+            if(used == false && x == 1){
+                used = true;
+            }
+            if(used == true && time != k){
+                time ++;
+            }
+            else if(time == k && x == 1){
+                ok = false;
+            }
+        }
+        if(ok == true){
+            cout << "YES\n";
+        }
+        else{
+            cout << "NO\n";
+        }
+    }
+}
