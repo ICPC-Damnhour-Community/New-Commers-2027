@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int t; cin >> t;
+
+    while(t --){
+        int n; cin >> n;
+        int zero = 0;
+        int sum = 1;
+        int mn = 9;
+        for(int i = 1; i <= n; i ++){
+            int x; cin >> x;
+            if(x == 0) zero ++;
+            if(x != 0) sum *= x;
+            if(mn > x) mn = x;
+        }
+        if(zero >= 2){
+            cout << 0 << '\n';
+        }
+        else if(zero == 1){
+            cout << sum << '\n';
+        }
+        else{
+            sum /= mn;
+            mn ++;
+            sum *= mn;
+            cout << sum << '\n';
+        }
+
+    }
+}
